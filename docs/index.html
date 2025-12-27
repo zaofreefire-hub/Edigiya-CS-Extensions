@@ -33,7 +33,7 @@ fetch("../builds/plugins.json")
     data.forEach(p => {
       div.innerHTML += `
         <div class="card">
-          <img src="${p.iconUrl || 'https://via.placeholder.com/70'}">
+          <img src="${p.iconUrl}">
           <div>
             <h2>${p.name}</h2>
             <p>الإصدار: ${p.version}</p>
