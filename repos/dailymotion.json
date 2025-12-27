@@ -1,0 +1,8 @@
+{
+  "name": "Dailymotion Repo - Edigiya Store",
+  "description": "مزود Dailymotion فقط",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/Edigiya/Edigiya-CS-Extensions/main/builds/dailymotion.json"
+  ]
+}
