@@ -1,10 +1,9 @@
 plugins {
-    id("com.lagradost.cloudstream3.plugin") version "0.0.7"
+    id("com.lagradost.cloudstream3.gradle-plugin")
 }
 
 cloudstream {
-    authors = listOf("Edigiya Store")
-    description = "Cima provider example"
-    language = "ar"
-    manifestVersion = 1
+    language.set("ar")
+    description.set("مزود تجريبي لصالح Edigiya Store")
+    authors.set(listOf("Edigiya Store"))
 }
