@@ -1,5 +1,6 @@
 plugins {
     id("com.lagradost.cloudstream3.gradle-plugin")
+    kotlin("android")
 }
 
 cloudstream {
