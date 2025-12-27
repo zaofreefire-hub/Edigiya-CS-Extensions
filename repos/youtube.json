@@ -1,0 +1,8 @@
+{
+  "name": "YouTube Arabic Repo - Edigiya Store",
+  "description": "مزود YouTube فقط",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/Edigiya/Edigiya-CS-Extensions/main/builds/youtube.json"
+  ]
+}
