@@ -2,30 +2,55 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>Edigiya Store CloudStream Extensions</title>
+<title>متجر Edigiya Store لـ CloudStream</title>
+
 <style>
-body { background:#121212; color:white; font-family:Arial; margin:0; padding:20px; }
-h1 { text-align:center; margin-bottom:30px; }
-.card {
-  background:#1e1e1e;
-  padding:20px;
-  border-radius:12px;
-  margin-bottom:15px;
-  display:flex;
-  align-items:center;
-  gap:20px;
+body {
+    background:#0d0d0d;
+    color:white;
+    font-family: 'Tajawal', sans-serif;
+    padding:20px;
 }
-.card img { width:70px; height:70px; border-radius:8px; background:#333; }
-.card a { color:#00e0ff; text-decoration:none; }
+h1 {
+    text-align:center;
+    margin-bottom:30px;
+    font-size:28px;
+}
+.card {
+    background:#1a1a1a;
+    border-radius:14px;
+    padding:20px;
+    margin-bottom:20px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    box-shadow:0 0 10px #000;
+    transition:0.3s;
+}
+.card:hover {
+    transform:scale(1.03);
+    box-shadow:0 0 20px #111;
+}
+.card img {
+    width:70px;
+    height:70px;
+    border-radius:10px;
+}
+a {
+    color:#00e1ff;
+    font-weight:bold;
+    text-decoration:none;
+}
 </style>
+
 </head>
 <body>
 
-<h1>🧩 إضافات Edigiya Store لـ CloudStream</h1>
+<h1>🧩 متجر Edigiya Store لإضافات CloudStream</h1>
 <div id="list">جاري التحميل…</div>
 
 <script>
-fetch("plugins.json")  <!-- ✔ المسار الصحيح -->
+fetch("plugins.json")
   .then(r => r.json())
   .then(data => {
     let div = document.getElementById("list");
@@ -33,7 +58,7 @@ fetch("plugins.json")  <!-- ✔ المسار الصحيح -->
     data.forEach(p => {
       div.innerHTML += `
         <div class="card">
-          <img src="${p.iconUrl || 'https://via.placeholder.com/70'}">
+          <img src="${p.iconUrl}">
           <div>
             <h2>${p.name}</h2>
             <p>الإصدار: ${p.version}</p>
@@ -42,6 +67,9 @@ fetch("plugins.json")  <!-- ✔ المسار الصحيح -->
         </div>
       `;
     });
+  })
+  .catch(() => {
+    document.getElementById("list").innerHTML = "فشل تحميل الإضافات.";
   });
 </script>
 
