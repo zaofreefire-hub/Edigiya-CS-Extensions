@@ -1,9 +1,9 @@
 [
   {
-    "name": "إضافة تجريبية",
+    "name": "Cima Provider",
     "version": "1.0.0",
-    "iconUrl": "https://via.placeholder.com/150",
-    "url": "https://example.com/plugin.cs3",
-    "description": "هذه إضافة تجريبية لعرض كيفية عمل متجر CloudStream."
+    "iconUrl": "https://cdn-icons-png.flaticon.com/512/742/742751.png",
+    "url": "https://zaofreefire-hub.github.io/Edigiya-CS-Extensions/builds/cima.cs3",
+    "description": "إضافة مشاهدة من موقع سيما تعمل داخل تطبيق CloudStream."
   }
 ]
