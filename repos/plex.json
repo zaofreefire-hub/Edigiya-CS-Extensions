@@ -1,0 +1,8 @@
+{
+  "name": "Plex Movies Repo - Edigiya Store",
+  "description": "مزود Plex لأفلام مجانية",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/Edigiya/Edigiya-CS-Extensions/main/builds/plex.json"
+  ]
+}
