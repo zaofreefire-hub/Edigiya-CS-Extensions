@@ -1,0 +1,40 @@
+package com.edigiya.cima
+
+import com.lagradost.cloudstream3.*
+import com.lagradost.cloudstream3.LoadResponse.Companion.addTrailer
+
+class CimaProvider : MainAPI() {
+    override var mainUrl = "https://example.com"
+    override var name = "Cima Provider"
+    override val supportedTypes = setOf(TvType.Movie)
+
+    override suspend fun search(query: String): List<SearchResponse> {
+        return listOf(
+            MovieSearchResponse(
+                "$query (فيلم تجريبي)",
+                "$mainUrl/movie/demo",
+                TvType.Movie,
+                poster = "https://cdn-icons-png.flaticon.com/512/742/742751.png"
+            )
+        )
+    }
+
+    override suspend fun load(url: String): LoadResponse? {
+        return newMovieLoadResponse("فيلم تجريبي", url, TvType.Movie) {
+            plot = "هذا مثال فقط لاختبار عمل الإضافة داخل CloudStream."
+            posterUrl = "https://cdn-icons-png.flaticon.com/512/742/742751.png"
+
+            addTrailer(
+                TrailerData("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+            )
+
+            addSource(
+                LinkData(
+                    "رابط تجريبي للجودة 720p",
+                    "https://example.com/video.mp4",
+                    true
+                )
+            )
+        }
+    }
+}
