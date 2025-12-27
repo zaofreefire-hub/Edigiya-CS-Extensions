@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Edigiya Store CloudStream Extensions</title>
+<style>
+body { background:#121212; color:white; font-family:Arial; margin:0; padding:20px; }
+h1 { text-align:center; margin-bottom:30px; }
+.card {
+  background:#1e1e1e;
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:15px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+.card img { width:70px; height:70px; border-radius:8px; background:#333; }
+.card a { color:#00e0ff; text-decoration:none; }
+</style>
+</head>
+<body>
+
+<h1>🧩 إضافات Edigiya Store لـ CloudStream</h1>
+<div id="list">جاري التحميل…</div>
+
+<script>
+fetch("../builds/plugins.json")
+  .then(r => r.json())
+  .then(data => {
+    let div = document.getElementById("list");
+    div.innerHTML = "";
+    data.forEach(p => {
+      div.innerHTML += `
+        <div class="card">
+          <img src="${p.iconUrl || 'https://via.placeholder.com/70'}">
+          <div>
+            <h2>${p.name}</h2>
+            <p>الإصدار: ${p.version}</p>
+            <a href="${p.url}">⬇ تحميل الإضافة</a>
+          </div>
+        </div>
+      `;
+    });
+  });
+</script>
+
+</body>
+</html>
