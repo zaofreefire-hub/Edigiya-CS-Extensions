@@ -1,8 +1,0 @@
-{
-  "name": "Cima Provider",
-  "pluginClassName": "com.edigiya.cima.Plugin",
-  "version": 1,
-  "iconUrl": "https://cdn-icons-png.flaticon.com/512/742/742751.png",
-  "requiresResources": false,
-  "description": "مزود تجريبي للتعلم فقط."
-}
