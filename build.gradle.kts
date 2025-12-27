@@ -1,22 +1,9 @@
 plugins {
-    id("com.android.library")
-    kotlin("android")
+    id("com.lagradost.cloudstream3.gradle-plugin")
 }
 
-android {
-    namespace = "com.cimaprovider"
-    compileSdk = 33
-
-    defaultConfig {
-        minSdk = 21
-    }
-}
-
-repositories {
-    mavenCentral()
-    google()
-}
-
-dependencies {
-    implementation("com.github.recloudstream:cloudstream:master-SNAPSHOT")
+cloudstream {
+    language.set("ar")
+    description.set("مزود تجريبي لصالح Edigiya Store")
+    authors.set(listOf("Edigiya Store"))
 }
