@@ -1,0 +1,10 @@
+{
+  "name": "Edigiya Store CloudStream Pack",
+  "version": 1,
+  "plugins": [
+    "com.edigiyastore.YouTubeProvider",
+    "com.edigiyastore.DailymotionProvider",
+    "com.edigiyastore.ArchiveProvider",
+    "com.edigiyastore.PlexProvider"
+  ]
+}
