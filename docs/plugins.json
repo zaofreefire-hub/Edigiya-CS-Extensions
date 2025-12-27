@@ -2,8 +2,8 @@
   {
     "name": "Cima Provider",
     "version": "1.0.0",
-    "iconUrl": "https://cdn-icons-png.flaticon.com/512/742/742751.png",
+    "iconUrl": "https://i.imgur.com/DFW8FzC.png",
     "url": "https://zaofreefire-hub.github.io/Edigiya-CS-Extensions/builds/cima.cs3",
-    "description": "إضافة مشاهدة من موقع سيما تعمل داخل تطبيق CloudStream."
+    "description": "بروفايدر تجريبي لموقع Cima."
   }
 ]
