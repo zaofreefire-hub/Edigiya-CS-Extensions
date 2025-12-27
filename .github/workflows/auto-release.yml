@@ -1,0 +1,56 @@
+name: Auto Build & Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set version
+        id: version
+        run: |
+          LAST=$(git tag --sort=-v:refname | head -n 1)
+          if [ -z "$LAST" ]; then
+            NEW="v1.0.0"
+          else
+            BASE=${LAST%.*}
+            PATCH=${LAST##*.}
+            PATCH=$((PATCH+1))
+            NEW="$BASE.$PATCH"
+          fi
+          echo "new=$NEW" >> $GITHUB_OUTPUT
+
+      - name: Build Plugin
+        run: ./gradlew makePlugin
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: "${{ steps.version.outputs.new }}"
+          files: output/*.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update plugins.json
+        run: |
+          echo "[
+            {
+              \"name\": \"Edigiya Store Providers\",
+              \"version\": \"${{ steps.version.outputs.new }}\",
+              \"url\": \"https://github.com/${{ github.repository }}/releases/download/${{ steps.version.outputs.new }}/plugin.apk\"
+            }
+          ]" > builds/plugins.json
+
+      - name: Commit
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "github-actions"
+          git add builds/plugins.json
+          git commit -m "Auto update"
+          git push
