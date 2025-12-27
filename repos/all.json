@@ -1,0 +1,12 @@
+{
+  "name": "All Providers - Edigiya Store",
+  "description": "جميع الإضافات الخاصة بـ Edigiya Store داخل مستودع واحد",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/Edigiya/Edigiya-CS-Extensions/main/builds/plugins.json",
+    "https://raw.githubusercontent.com/Edigiya/Edigiya-CS-Extensions/main/builds/youtube.json",
+    "https://raw.githubusercontent.com/Edigiya/Edigiya-CS-Extensions/main/builds/archive.json",
+    "https://raw.githubusercontent.com/Edigiya/Edigiya-CS-Extensions/main/builds/dailymotion.json",
+    "https://raw.githubusercontent.com/Edigiya/Edigiya-CS-Extensions/main/builds/plex.json"
+  ]
+}
