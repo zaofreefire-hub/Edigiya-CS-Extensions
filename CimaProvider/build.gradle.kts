@@ -4,6 +4,6 @@ plugins {
 
 cloudstream {
     language.set("ar")
-    description.set("مزود تجريبي لصالح Edigiya Store")
+    description.set("Cima provider test plugin")
     authors.set(listOf("Edigiya Store"))
 }
