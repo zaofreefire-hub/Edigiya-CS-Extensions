@@ -1,9 +1,9 @@
 {
-  "name": "Cima Provider",
-  "description": "مزود تجريبي لـ CloudStream",
+  "name": "CimaProvider",
   "version": "1.0.0",
-  "author": "Edigiya Store",
+  "description": "Test provider for CloudStream",
   "language": "ar",
-  "url": "",
-  "type": "plugin"
+  "author": "Edigiya Store",
+  "type": "plugin",
+  "pluginClass": "com.cimaprovider.CimaProvider"
 }
