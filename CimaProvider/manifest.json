@@ -1,9 +1,9 @@
 {
   "name": "CimaProvider",
-  "version": "1.0.0",
+  "version": 1,
   "description": "Test provider for CloudStream",
   "language": "ar",
-  "author": "Edigiya Store",
-  "type": "plugin",
-  "pluginClass": "com.cimaprovider.CimaProvider"
+  "authors": ["Edigiya Store"],
+  "plugin_type": "provider",
+  "plugin_class": "com.cimaprovider.CimaProvider"
 }
