@@ -1,34 +1,17 @@
 plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
+    id("com.android.library")
+    kotlin("android")
 }
 
 android {
-    compileSdk 33
+    namespace = "com.edigiya.cima"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId "com.edigiyastore.extensions"
-        minSdk 21
-        targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        minSdk = 21
     }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-        }
-    }
-
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
-    }
-}
-
-repositories {
-    mavenCentral()
 }
 
 dependencies {
-    implementation 'com.github.recloudstream:cloudstream:master-SNAPSHOT'
+    implementation("com.lagradost:cloudstream3:4.0.0")
 }
