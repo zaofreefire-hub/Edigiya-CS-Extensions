@@ -1,0 +1,8 @@
+{
+  "name": "Edigiya Store Repo",
+  "description": "المستودع الرسمي لإضافات Edigiya Store الخاصة بـ CloudStream.",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/Edigiya/Edigiya-CS-Extensions/main/builds/plugins.json"
+  ]
+}
