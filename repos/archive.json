@@ -1,0 +1,8 @@
+{
+  "name": "Archive Movies Repo - Edigiya Store",
+  "description": "مزود أفلام Public Domain فقط",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/Edigiya/Edigiya-CS-Extensions/main/builds/archive.json"
+  ]
+}
